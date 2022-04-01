@@ -1,0 +1,27 @@
+{
+  "name": "bentlyskunkworks",
+  "version": "1.0.0",
+  "description": "Local Pottery Co. in Fl",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tallen1985/bentlySkunkWorks.git"
+  },
+  "keywords": [
+    "pottery",
+    "florida"
+  ],
+  "author": "Grey Gato Media",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tallen1985/bentlySkunkWorks/issues"
+  },
+  "homepage": "https://github.com/tallen1985/bentlySkunkWorks#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.6"
+  }
+}

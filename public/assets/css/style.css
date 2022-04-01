@@ -1,0 +1,80 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+#modalSection {
+    position: relative;
+    display: none;
+    z-index: 1;
+    overflow-y: hidden;
+}
+main {
+    position: relative;
+    z-index: 0;
+}
+
+#jumbotron {
+    background-image: url('../img/jumbotron.jpeg');
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 750px;
+}
+
+#carouselDiv {
+    height: 450px;
+}
+
+.carousel-item img {
+    width: 300px;
+}
+
+#aboutSection {
+    background-image: url(../img/pot2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+#aboutContent {
+    background-color: rgba(255,255,255,.5);
+    color:darkslategray
+}
+
+.card-text {
+    height: 75px;
+}
+
+.custom-bg {
+    background-color: rgba(0,0,0,.8);
+}
+
+#itemsList {
+    padding: 0;
+    height: 80%;
+    overflow-y: scroll;
+}
+#itemsList li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+}
+#itemsList li div {
+    margin: 10px;
+    flex: 1 0 300px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        background: darkslategray;
+    }
+    #aboutSection {
+        height:fit-content;
+  }
