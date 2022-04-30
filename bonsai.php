@@ -7,6 +7,7 @@ session_start();
       $_SESSION["data"] = $data;
     } else {
       $data = $_SESSION["data"];
+      $items = json_decode($data);
     }
     
  ?>
@@ -30,10 +31,10 @@ session_start();
       crossorigin="anonymous"
     />
     <link href="assets/css/style.css" rel="stylesheet" />
-    <title>Bently Skunkworks - Locally made pottery</title>
+    <title>Bonsai Pots | Bently Skunkworks | Locally made pottery</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">Bently Skunkworks</a>
         <button
@@ -86,12 +87,12 @@ session_start();
       <div class="header">
         <div class="content">
           <div class="image">
-            <img src="assets/img/palm-tree.jpg" />
+            <img src="assets/img/bonsai.jpg" />
           </div>
           <div class="info">
             <div class="infoBox">
               <h1>Bently Skunkworks</h1>
-              <p>A division of Purple Flamingo Pottery</p>
+              <p>Bonsai Pots</p>
             </div>
           </div>
         </div>
@@ -101,37 +102,22 @@ session_start();
         <div class="content">
           <h2>Featured Products</h2>
           <div class="imageBox">
-            <div class="item">
-              <img src="assets/img/bonsai.jpg" />
-              <a href="/bonsai.php" class="btn btn-dark">Bonsai Collection</a>
-            </div>
-            <div class="item">
-              <img src="assets/img/sake.jpg" />
-              <a href="/sake.php" class="btn btn-dark">Sake Sets</a>
-            </div>
-            <div class="item">
-              <img src="assets/img/jumbotron.jpeg" />
-              <a href="/other.php" class="btn btn-dark">Other Cool Stuff</a>
-            </div>
+            <?php
+            foreach($items->results as $item) {
+              if ((explode("-",$item->sku[0]))[0] == "BP") {
+                echo "<a href=".$item->url." target='_blank'><div class='item'>
+                <img src=".$item->MainImage->url_570xN." />
+                <h3>$item->title</h3>
+                <h4>$ $item->price</h4></a>
+              </div>";
+              };
+            }
+            ?>
           </div>
         </div>
       </div>
 
-      <div class="about" id="about">
-        <div class="content">
-          <h2>About</h2>
-          <h3>
-            The Skunkworks were born due to a budding of a professional shop in
-            Dallas Texas. The purpose is to allow a creative culprit an outlet
-            in clay. Bently Skunkworks is a complete shop with a Skutt electric
-            kiln and Shimpo wheel. Here we are creating products using
-            traditional methods and raw materials. However the design and
-            finished products come from a woodworkers mind. Utilizing little
-            guidance from seasoned potters, we hope you find our wares
-            refreshing, useful and beautiful additions to your home.
-          </h3>
-        </div>
-      </div>
+      
       <footer>
         <p>&copy 2022 - Bently Skunkworks</p>
       </footer>

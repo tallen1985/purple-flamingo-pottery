@@ -1,0 +1,458 @@
+//**
+// Project Mixins
+//**
+@use "sass:math";
+
+// Clear after floats
+@mixin clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Apply clearfix to this classes by default
+.clearfix,
+.group,
+.row {
+  @include clearfix;
+}
+
+
+@mixin customColor {
+  .board-grey, .board-grey & { color: #55565B; }
+  .dock-grey, .dock-grey & { color: #B2B1B0; }
+  .iced-blue, .iced-blue & { color: #52739E; }
+  .loft, .loft & { color: #39AFC7; }
+  .orange-splash, .orange-splash & { color: #F16728; }
+  .peak, .peak & { color: #8D3210; }
+  .poppy, .poppy & { color: #EF4B5D; }
+  .retro, .retro & { color: #B6BE34; }
+  .sail-yellow, .sail-yellow & { color: #F5CF3D; }
+  .shadow, .shadow & { color: #005B78; }
+  .sundown, .sundown & { color: #805A89; }
+  .vinate, .vinate & { color: #6BC6B7; }
+}
+@mixin customBackgroundColor {
+  .board-grey, .board-grey & { background-color: #55565B; }
+  .dock-grey, .dock-grey & { background-color: #B2B1B0; }
+  .iced-blue, .iced-blue & { background-color: #52739E; }
+  .loft, .loft & { background-color: #39AFC7; }
+  .orange-splash, .orange-splash & { background-color: #F16728; }
+  .peak, .peak & { background-color: #8D3210; }
+  .poppy, .poppy & { background-color: #EF4B5D; }
+  .retro, .retro & { background-color: #B6BE34; }
+  .sail-yellow, .sail-yellow & { background-color: #F5CF3D; }
+  .shadow, .shadow & { background-color: #005B78; }
+  .sundown, .sundown & { background-color: #805A89; }
+  .vinate, .vinate & { background-color: #6BC6B7; }
+}
+@mixin customBackgroundTexture {
+  &.board-grey { background: url(/images/Background-Board-Grey.svg) repeat; }
+  &.dock-grey { background: url(/images/Background-Dock-Grey.svg) repeat; }
+  &.iced-blue { background: url(/images/Background-Iced-Blue.svg) repeat; }
+  &.loft { background: url(/images/Background-Loft.svg) repeat; }
+  &.orange-splash { background: url(/images/Background-Orange-Splash.svg) repeat; }
+  &.peak { background: url(/images/Background-Peak.svg) repeat; }
+  &.poppy { background: url(/images/Background-Poppy.svg) repeat; }
+  &.retro { background: url(/images/Background-Retro.svg) repeat; }
+  &.sail-yellow { background: url(/images/Background-Sail-Yellow.svg) repeat; }
+  &.shadow { background: url(/images/Background-Shadow.svg) repeat; }
+  &.sundown { background: url(/images/Background-Sundown.svg) repeat; }
+  &.vinate { background: url(/images/Background-Vinate.svg) repeat; }
+}
+
+@mixin texture {
+  @at-root .board-grey#{&} { background: url(/images/Background-Board-Grey.svg) repeat; }
+  @at-root .dock-grey#{&} { background: url(/images/Background-Dock-Grey.svg) repeat; }
+  @at-root .iced-blue#{&} { background: url(/images/Background-Iced-Blue.svg) repeat; }
+  @at-root .loft#{&} { background: url(/images/Background-Loft.svg) repeat; }
+  @at-root .orange-splash#{&} { background: url(/images/Background-Orange-Splash.svg) repeat; }
+  @at-root .peak#{&} { background: url(/images/Background-Peak.svg) repeat; }
+  @at-root .poppy#{&} { background: url(/images/Background-Poppy.svg) repeat; }
+  @at-root .retro#{&} { background: url(/images/Background-Retro.svg) repeat; }
+  @at-root .sail-yellow#{&} { background: url(/images/Background-Sail-Yellow.svg) repeat; }
+  @at-root .shadow#{&} { background: url(/images/Background-Shadow.svg) repeat; }
+  @at-root .sundown#{&} { background: url(/images/Background-Sundown.svg) repeat; }
+  @at-root .vinate#{&} { background: url(/images/Background-Vinate.svg) repeat; }
+}
+@mixin textureColor {
+  @at-root .board-grey#{&} { color: #55565B; }
+  @at-root .dock-grey#{&} { color: #B2B1B0; }
+  @at-root .iced-blue#{&} { color: #52739E; }
+  @at-root .loft#{&} { color: #39AFC7; }
+  @at-root .orange-splash#{&} { color: #F16728; }
+  @at-root .peak#{&} { color: #8D3210; }
+  @at-root .poppy#{&} { color: #EF4B5D; }
+  @at-root .retro#{&} { color: #B6BE34; }
+  @at-root .sail-yellow#{&} { color: #F5CF3D; }
+  @at-root .shadow#{&} { color: #005B78; }
+  @at-root .sundown#{&} { color: #805A89; }
+  @at-root .vinate#{&} { color: #6BC6B7; }
+}
+
+
+// Max Wrap
+@mixin max-wrap {
+  max-width: $max-wrap;
+  margin: 0 auto;
+}
+.max-wrap > .content {
+    max-width: $max-wrap !important;
+    margin: 0 auto;
+}
+
+.max-wrap-medium > .content {
+    max-width: $max-wrap !important;
+    margin: 0 auto;
+}
+
+@mixin max-wrap-large {
+  max-width: $max-wrap-large;
+  margin: 0 auto;
+}
+.max-wrap-large > .content {
+    max-width: $max-wrap-large !important;
+    margin: 0 auto;
+}
+
+
+// Max Wrap
+@mixin max-wrap-small {
+  max-width: $max-wrap-small;
+  margin: 0 auto;
+}
+
+// Max Wrap
+@mixin max-wrap-xsmall {
+  max-width: $max-wrap-xsmall;
+  margin: 0 auto;
+}
+
+.max-wrap-small > .content {
+    max-width: $max-wrap-small !important;
+    margin: 0 auto;
+}
+.max-wrap-xsmall > .content {
+    max-width: $max-wrap-xsmall !important;
+    margin: 0 auto;
+}
+
+//Creates an x
+@mixin close-btn($width, $height, $color) {
+  z-index: 20;
+  position: absolute;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: $width;
+    height: $height;
+    background: $color;
+    transform: rotate(45deg);
+    top: 50%;
+    left: 50%;
+  }
+  &:after {
+    transform: translate(0,($width/5)*-1) rotate(-45deg);
+  }
+}
+
+//style placeholder
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+// Alignment
+@mixin align-center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin align-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+@mixin align-center-horizontal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// Responsive mixins
+@mixin responsive($res) {
+  @media screen and (min-width: $res) {
+    @content;
+  }
+}
+@mixin responsiveSize($min,$max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+@mixin tablet-small {
+  @media screen and (min-width: $tablet-small-break) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: $tablet-break) {
+    @content;
+  }
+}
+@mixin desktop-wrap {
+  @media screen and (min-width: $max-wrap) {
+    @content;
+  }
+}
+@mixin large-tablet {
+  @media screen and (min-width: $large-tablet-break) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: $desktop-break) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: ($tablet-break - 1)) {
+    @content;
+  }
+}
+@mixin maxResponsive($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+@mixin special-weight-headline {
+  font-weight: 500;
+  & strong {
+    font-weight: 700;
+  }
+}
+@mixin special-weight-body {
+  font-weight: 600;
+  & strong {
+    font-weight: 700;
+  }
+}
+@mixin content-text {
+  h2 {
+    margin: 0 auto 1em;
+    font-family: $heading-font;
+    @include responsiveFontAuto(2.2, 4);
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  h3 {
+    margin: 0 auto 1em;
+    font-family: $heading-font;
+    @include responsiveFontAuto(2, 2.2);
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  h4 {
+    margin: 0 auto 1em;
+    font-family: $body-font;
+    @include responsiveFontAuto(2, 2.2);
+    color: $black;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  h5 {
+    margin: 0 auto 1em;
+    font-family: $body-font;
+    @include responsiveFontAuto(1.8, 2);
+    color: $black;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  ul, ol {
+    margin: 0 auto;
+  }
+  p, li {
+    margin: 0 auto 1em;
+    font-family: $body-font;
+    @include responsiveFontAuto(1.8, 2.2);
+    line-height: 2;
+    &:last-child {
+      margin: 0 auto;
+    }
+  }
+}
+
+/** RESPONSIVE TYPE */
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-font-size($fs-font-size);
+    }
+    @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+
+// Utility function for mixin font-size
+@mixin make-font-size($fs-font-size) {
+  // If $fs-font-size is a list, include
+  // both font-size and line-height
+  @if type-of($fs-font-size) == "list" {
+    font-size: nth($fs-font-size, 1);
+    @if (length($fs-font-size) > 1) {
+      line-height: nth($fs-font-size, 2);
+    }
+    @if (length($fs-font-size) > 2) {
+      margin-bottom: nth($fs-font-size, 3);
+    }
+  }
+  @else {
+    font-size: $fs-font-size;
+  }
+}
+
+
+//USE VW size with browser support
+@mixin responsiveFont($font-size, $min-size, $max-size) {
+   font-size: $font-size+vw;
+   @if $min-size != null {
+      $windowS: math.div(($max-size*10),math.div($font-size,100));
+      @media screen and (max-width: $windowS+px) {
+        font-size: $min-size+rem;
+      }
+   }
+   @if $max-size != null {
+      $windowL: math.div(($max-size*10),math.div($font-size,100));
+      @media screen and (min-width: $windowL+px) {
+        font-size: $max-size+rem;
+      }
+   }
+}
+
+//USE VW size with browser support
+@mixin fontSize($max-size) {
+   $min-size: $max-size*.7;
+   $font-size: ($min-size + math.div($max-size - $min-size,2))*.68;
+   font-size: $font-size+vw;
+   @if $min-size < 1.4 {
+       $min-size: 1.4;
+   }
+   @if $min-size != null {
+      $windowS: math.div(($min-size*10),math.div($font-size,100));
+      @media screen and (max-width: $windowS+px) {
+        font-size: $min-size+rem;
+      }
+   }
+   @if $max-size != null {
+      $windowL: math.div(($max-size*10),math.div($font-size,100));
+      @media screen and (min-width: $windowL+px) {
+        font-size: $max-size+rem;
+      }
+   }
+}
+
+//USE VW size with browser support
+@mixin responsiveFontAuto($min-size, $max-size) {
+    $font-size: ($min-size + math.div($max-size - $min-size,2))*.68;
+    font-size: $font-size+vw;
+
+    @if $min-size != null {
+        $windowS: math.div(($max-size*10),math.div($font-size,100));
+
+        @media screen and (max-width: $windowS+px) {
+            font-size: $min-size+rem;
+        }
+    }
+
+    @if $max-size != null {
+        $windowL: math.div(($max-size*10),math.div($font-size,100));
+
+        @media screen and (min-width: $windowL+px) {
+            font-size: $max-size+rem;
+        }
+    }
+}
+
+//USE VW size with browser support
+@mixin responsiveHeightFont($font-size, $min-size, $max-size) {
+    font-size: $font-size+vh;
+
+    @if $min-size != null {
+        $windowS: math.div(($max-size*10),math.div($font-size,100));
+
+        @media screen and (max-height: $windowS+px) {
+            font-size: $min-size+rem;
+        }
+    }
+
+    @if $max-size != null {
+        $windowL: math.div(($max-size*10),math.div($font-size,100));
+
+        @media screen and (min-height: $windowL+px) {
+            font-size: $max-size+rem;
+        }
+    }
+}
+
+//USE VW size with browser support
+@mixin responsiveMixedFont($font-size, $min-size, $max-size) {
+   font-size: ($font-size/2)+vw;
+
+  @media screen and (min-aspect-ratio: 6/4) {
+     font-size: $font-size+vh;
+  }
+
+
+   @if $min-size != null {
+      $windowS: math.div(($max-size*10),math.div($font-size,100));
+      @media screen and (max-height: $windowS+px) {
+        font-size: $min-size+rem;
+      }
+   } 
+   @if $max-size != null {
+      $windowL: math.div(($max-size*10),math.div($font-size,100));
+      @media screen and (min-height: $windowL+px) {
+        font-size: $max-size+rem;
+      }
+   }
+}

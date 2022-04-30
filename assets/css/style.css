@@ -1,80 +1,619 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
 body {
-    font-family: 'Raleway', sans-serif;
+  margin: 0;
 }
 
-h1 {
-    font-weight: 100;
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary, div {
+  display: block;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: top;
 }
 
-#modalSection {
-    position: relative;
-    display: none;
-    z-index: 1;
-    overflow-y: hidden;
-}
-main {
-    position: relative;
-    z-index: 0;
+audio, canvas, progress, video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
 }
 
-#jumbotron {
-    background-image: url('../img/jumbotron.jpeg');
-    background-size: cover;
-    background-position: 50% 50%;
-    width: 100%;
-    height: 750px;
+audio:not([controls]) {
+  display: none;
+  height: 0;
 }
 
-#carouselDiv {
-    height: 450px;
+[hidden], template {
+  display: none;
 }
 
-.carousel-item img {
-    width: 300px;
+abbr[title] {
+  border-bottom: 1px dotted;
 }
 
-#aboutSection {
-    background-image: url(../img/pot2.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-size:cover;
-    background-repeat: no-repeat;
-    height: 400px;
-}
-#aboutContent {
-    background-color: rgba(255,255,255,.5);
-    color:darkslategray
+b, strong {
+  font-weight: bold;
 }
 
-.card-text {
-    height: 75px;
+dfn {
+  font-style: italic;
 }
 
-.custom-bg {
-    background-color: rgba(0,0,0,.8);
+mark {
+  background: #ff0;
+  color: #000;
 }
 
-#itemsList {
-    padding: 0;
-    height: 80%;
-    overflow-y: scroll;
-}
-#itemsList li {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-around;
-    align-items: center;
-}
-#itemsList li div {
-    margin: 10px;
-    flex: 1 0 300px;
+small {
+  font-size: 75%;
 }
 
-@media (max-width: 991.98px) {
-    .navbar {
-        background: darkslategray;
-    }
-    #aboutSection {
-        height:fit-content;
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.3em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0px;
+}
+
+figcaption {
+  text-align: center;
+}
+
+hr {
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  padding: 0;
+  margin: 0;
+}
+
+dl {
+  margin: 0;
+}
+
+dd, dt {
+  margin: 0;
+  padding: 0;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+/*! END normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/** Pannos Normalize  */
+html {
+  color: #222;
+  font-size: 62.5%;
+}
+
+/* BASE FONT 10px - Line Height  24px */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+  line-height: 1.625;
+}
+
+/* Font Smoothing */
+/* Font Loading Fix*/
+html.wf-loading {
+  font-family: "Arial", Tahoma, sans-serif;
+  line-height: 1.5;
+  visibility: hidden;
+}
+
+html.wf-active, html.wf-inactive {
+  visibility: visible;
+  font-size: 62.5%;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, ul, p {
+  margin: 0 0 1em 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*Hide visually and from screen readers:*/
+.hidden {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after,
+.l-row:before,
+.l-row:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after,
+.l-row:after {
+  clear: both;
+}
+
+/** Button Reset */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  display: inline-block;
+}
+
+.navbar-nav {
+  font-family: "Railway", sans-serif;
+  font-size: 2rem;
+  padding: 0 30px;
+}
+
+.navbar-nav li {
+  padding: 0 10px;
+}
+
+.navbar-nav .dropdown-item {
+  font-size: 2rem;
+}
+
+.navbar-brand {
+  font-family: "Railway", sans-serif;
+  font-size: 2rem;
+  padding: 0 30px;
+}
+
+.navbar-toggler-icon {
+  font-size: 2.5em;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 1.25rem;
+}
+
+main .header {
+  padding-top: 3em;
+  text-align: center;
+  margin-bottom: 5em;
+}
+
+main .header > .content {
+  margin: 0 auto;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+  main .header > .content {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 25px;
+            column-gap: 25px;
   }
+}
+
+main .header > .content .image {
+  text-align: right;
+  margin-bottom: 2em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main .header > .content .image img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  main .header > .content .image img {
+    border-radius: 30px;
+    max-width: 500px;
+    -webkit-box-shadow: 3px 3px 3px darkslategrey;
+            box-shadow: 3px 3px 3px darkslategrey;
+  }
+}
+
+main .header > .content .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .header > .content .info .infoBox {
+  text-align: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 2em 2em;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+main .header > .content .info .infoBox p {
+  margin-bottom: 0;
+}
+
+main .featuredProducts > .content {
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: "Railway", sans-serif;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+main .featuredProducts > .content h2 {
+  margin: 0 auto;
+  display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.5rem;
+  background: #fff;
+  padding: 0 3em 1em;
+  margin-bottom: 2em;
+  border-bottom: 2px solid black;
+}
+
+main .featuredProducts > .content .imageBox {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 900px) {
+  main .featuredProducts > .content .imageBox {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+main .featuredProducts > .content .imageBox a:hover {
+  text-decoration: underline;
+}
+
+main .featuredProducts > .content .imageBox .item {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 2em;
+  padding: 0 30px;
+}
+
+@media screen and (min-width: 900px) {
+  main .featuredProducts > .content .imageBox .item {
+    -ms-grid-columns: ()[1fr];
+        grid-template-columns: repeat(1fr);
+  }
+}
+
+main .featuredProducts > .content .imageBox .item img {
+  border-radius: 15px;
+  max-width: 350px;
+}
+
+@media screen and (max-width: 899px) {
+  main .featuredProducts > .content .imageBox .item img {
+    border-radius: none;
+  }
+}
+
+main .featuredProducts > .content .imageBox .item h3,
+main .featuredProducts > .content .imageBox .item h4 {
+  font-family: "Railway", sans-serif;
+  margin: 1em auto;
+  color: #000;
+}
+
+main .featuredProducts > .content .imageBox .item a {
+  position: relative;
+  top: -70px;
+  margin: 0 auto;
+  font-size: 2.4rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+main .about {
+  width: 100%;
+  font-family: "Railway", sans-serif;
+  background-color: rgba(32, 178, 171, 0.3);
+}
+
+main .about > .content {
+  padding: 2em 30px;
+}
+
+@media screen and (min-width: 900px) {
+  main .about > .content {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+main .about > .content h2 {
+  margin: 0 auto;
+  display: block;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 2.5rem;
+  padding: 0 0 1em;
+  margin-bottom: 2em;
+  border-bottom: 2px solid black;
+}
+
+main .photo-section > .content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  margin: 0 auto 3em;
+  display: -ms-grid;
+  display: grid;
+}
+
+@media screen and (min-width: 900px) {
+  main .photo-section > .content {
+    -ms-grid-columns: 35% 1fr;
+        grid-template-columns: 35% 1fr;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+  }
+}
+
+main footer {
+  background-color: lightseagreen;
+  padding: 1em 30px;
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  main footer {
+    text-align: center;
+  }
+}
+
+main footer p {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style.css.map */
