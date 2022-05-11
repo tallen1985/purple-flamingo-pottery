@@ -15,8 +15,7 @@ body {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary, div {
   display: block;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   vertical-align: top;
 }
 
@@ -118,7 +117,7 @@ button, select {
   text-transform: none;
 }
 
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button, html input[type=button], input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -138,23 +137,22 @@ input {
   line-height: normal;
 }
 
-input[type="checkbox"], input[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
 }
 
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type="search"] {
+input[type=search] {
   -webkit-appearance: textfield;
 }
 
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -187,8 +185,7 @@ td, th {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 nav ul {
@@ -210,7 +207,7 @@ dd, dt {
   padding: 0;
 }
 
-[role="button"] {
+[role=button] {
   cursor: pointer;
 }
 
@@ -357,11 +354,9 @@ button {
   font-size: 2rem;
   padding: 0 30px;
 }
-
 .navbar-nav li {
   padding: 0 10px;
 }
-
 .navbar-nav .dropdown-item {
   font-size: 2rem;
 }
@@ -385,77 +380,49 @@ main .header {
   text-align: center;
   margin-bottom: 5em;
 }
-
 main .header > .content {
   margin: 0 auto;
-  display: -ms-inline-grid;
   display: inline-grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 @media screen and (min-width: 900px) {
   main .header > .content {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 25px;
-            column-gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
   }
 }
-
 main .header > .content .image {
   text-align: right;
   margin-bottom: 2em;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 main .header > .content .image img {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  object-fit: scale-down;
   max-width: 100%;
 }
-
 @media screen and (min-width: 900px) {
   main .header > .content .image img {
     border-radius: 30px;
     max-width: 500px;
-    -webkit-box-shadow: 3px 3px 3px darkslategrey;
-            box-shadow: 3px 3px 3px darkslategrey;
+    box-shadow: 3px 3px 3px darkslategrey;
   }
 }
-
 main .header > .content .info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 main .header > .content .info .infoBox {
   text-align: center;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   padding: 2em 2em;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
-
 main .header > .content .info .infoBox p {
   margin-bottom: 0;
 }
-
 main .featuredProducts > .content {
   max-width: 1400px;
   margin: 0 auto;
@@ -463,157 +430,117 @@ main .featuredProducts > .content {
   text-align: center;
   margin-bottom: 3em;
 }
-
 main .featuredProducts > .content h2 {
   margin: 0 auto;
   display: inline-block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-size: 2.5rem;
   background: #fff;
   padding: 0 3em 1em;
   margin-bottom: 2em;
   border-bottom: 2px solid black;
 }
-
 main .featuredProducts > .content .imageBox {
-  display: -ms-grid;
   display: grid;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  flex-wrap: wrap;
 }
-
 @media screen and (min-width: 900px) {
   main .featuredProducts > .content .imageBox {
     max-width: 1400px;
     margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
-
 main .featuredProducts > .content .imageBox a:hover {
   text-decoration: underline;
 }
-
 main .featuredProducts > .content .imageBox .item {
-  display: -ms-grid;
   display: grid;
   position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
   margin-bottom: 2em;
   padding: 0 30px;
 }
-
 @media screen and (min-width: 900px) {
   main .featuredProducts > .content .imageBox .item {
-    -ms-grid-columns: ()[1fr];
-        grid-template-columns: repeat(1fr);
+    grid-template-columns: repeat(1fr);
   }
 }
-
 main .featuredProducts > .content .imageBox .item img {
   border-radius: 15px;
   max-width: 350px;
 }
-
 @media screen and (max-width: 899px) {
   main .featuredProducts > .content .imageBox .item img {
     border-radius: none;
   }
 }
-
 main .featuredProducts > .content .imageBox .item h3,
 main .featuredProducts > .content .imageBox .item h4 {
   font-family: "Railway", sans-serif;
   margin: 1em auto;
   color: #000;
 }
-
 main .featuredProducts > .content .imageBox .item a {
   position: relative;
   top: -70px;
   margin: 0 auto;
   font-size: 2.4rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
-
 main .about {
   width: 100%;
   font-family: "Railway", sans-serif;
   background-color: rgba(32, 178, 171, 0.3);
 }
-
 main .about > .content {
   padding: 2em 30px;
 }
-
 @media screen and (min-width: 900px) {
   main .about > .content {
     margin: 0 auto;
     width: 70%;
   }
 }
-
 main .about > .content h2 {
   margin: 0 auto;
   display: block;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   font-size: 2.5rem;
   padding: 0 0 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   border-bottom: 2px solid black;
 }
-
 main .photo-section > .content {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 30px;
   margin: 0 auto 3em;
-  display: -ms-grid;
   display: grid;
 }
-
 @media screen and (min-width: 900px) {
   main .photo-section > .content {
-    -ms-grid-columns: 35% 1fr;
-        grid-template-columns: 35% 1fr;
-    -webkit-column-gap: 30px;
-            column-gap: 30px;
+    grid-template-columns: 35% 1fr;
+    column-gap: 30px;
   }
 }
-
 main footer {
   background-color: lightseagreen;
   padding: 1em 30px;
   width: 100%;
 }
-
 @media screen and (min-width: 900px) {
   main footer {
     text-align: center;
   }
 }
-
 main footer p {
   max-width: 1400px;
   margin: 0 auto;
 }
+
 /*# sourceMappingURL=style.css.map */
