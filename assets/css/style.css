@@ -495,7 +495,7 @@ main .featuredProducts > .content .imageBox .item a {
 main .about {
   width: 100%;
   font-family: "Railway", sans-serif;
-  background-color: rgba(32, 178, 171, 0.3);
+  background-color: rgba(255, 214, 255, 0.6);
 }
 main .about > .content {
   padding: 2em 30px;
@@ -529,7 +529,7 @@ main .photo-section > .content {
   }
 }
 main footer {
-  background-color: lightseagreen;
+  background-color: rgba(231, 198, 255, 0.6);
   padding: 1em 30px;
   width: 100%;
 }

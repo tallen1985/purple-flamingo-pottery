@@ -47,11 +47,10 @@ session_start();
                             Artists
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/bonsai.php">Bently Skunk Works</a></li>
-                            <li><a class="dropdown-item" href="/sake.php">A Hart's Eye Photography</a></li>
-                            <li>
-                                <a class="dropdown-item" href="/other.php">Purple Flamingo Pottery</a>
-                            </li>
+                            <li><a class="dropdown-item" href="https://bentlyskunkworks.com" target="_blank">Bently
+                                    Skunk Works</a></li>
+                            <li><a class="dropdown-item" href="https://www.ahartseyephotography.com" target="_blank">A
+                                    Hart's Eye Photography</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
