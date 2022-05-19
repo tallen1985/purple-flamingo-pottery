@@ -8,7 +8,7 @@
             </div>
             <div class="info">
                 <div class="infoBox">
-                    <h1>Purple Flamingo Flock</h1>
+                    <h1>Purple Flamingo Pottery</h1>
                     <p>Local Artist Consortium</p>
                     <p>A division of Purple Flamingo Flock</p>
                 </div>
