@@ -423,7 +423,7 @@ main .header > .content .image::after {
 }
 @media screen and (max-width: 899px) {
   main .header > .content .image::after {
-    border-radius: none;
+    border-radius: 0;
   }
 }
 main .header > .content .image h2 {
