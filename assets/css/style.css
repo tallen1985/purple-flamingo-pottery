@@ -418,8 +418,13 @@ main .header > .content .image::after {
   top: 0;
   left: 0;
   background: rgb(2, 0, 36);
-  background: linear-gradient(180deg, rgba(2, 0, 36, 0) 0%, rgba(157, 78, 221, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(2, 0, 36, 0) 0%, rgba(157, 78, 221, 0.3) 100%);
   z-index: 10;
+}
+@media screen and (max-width: 899px) {
+  main .header > .content .image::after {
+    border-radius: none;
+  }
 }
 main .header > .content .image h2 {
   padding: 0 30px;
@@ -462,6 +467,7 @@ main .featuredProducts > .content img {
   max-width: 350px;
   text-align: center;
   margin-bottom: 1em;
+  width: 100%;
 }
 main .featuredProducts > .content h2 {
   margin: 0 auto;
