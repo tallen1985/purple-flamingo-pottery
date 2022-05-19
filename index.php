@@ -24,26 +24,6 @@
     </div>
     </div>
 
-    <div class="featuredProducts">
-        <div class="content">
-            <h2>Featured Products</h2>
-            <div class="imageBox">
-                <div class="item">
-                    <img src="assets/img/bonsai.jpg" />
-                    <a href="/bonsai.php" class="btn btn-dark">Bonsai Collection</a>
-                </div>
-                <div class="item">
-                    <img src="assets/img/sake.jpg" />
-                    <a href="/sake.php" class="btn btn-dark">Sake Sets</a>
-                </div>
-                <div class="item">
-                    <img src="assets/img/jumbotron.jpeg" />
-                    <a href="/other.php" class="btn btn-dark">Other Cool Stuff</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="about" id="about">
         <div class="content">
             <div class="contentBlock">
@@ -75,4 +55,26 @@
             </div>
         </div>
     </div>
+
+    <div class="featuredProducts">
+        <div class="content">
+            <h2>Featured Products</h2>
+            <div class="imageBox">
+                <div class="item">
+                    <img src="assets/img/bonsai.jpg" />
+                    <a href="/bonsai.php" class="btn btn-dark">Bonsai Collection</a>
+                </div>
+                <div class="item">
+                    <img src="assets/img/sake.jpg" />
+                    <a href="/sake.php" class="btn btn-dark">Sake Sets</a>
+                </div>
+                <div class="item">
+                    <img src="assets/img/jumbotron.jpeg" />
+                    <a href="/other.php" class="btn btn-dark">Other Cool Stuff</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <?php include_once "footer.php" ?>
