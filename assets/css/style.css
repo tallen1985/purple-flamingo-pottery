@@ -453,6 +453,7 @@ main .featuredProducts > .content {
   max-width: 1400px;
   margin: 0 auto;
   font-family: "Railway", sans-serif;
+  padding: 0 30px;
   text-align: center;
   margin-bottom: 3em;
 }
