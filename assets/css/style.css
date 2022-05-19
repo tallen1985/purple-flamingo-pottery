@@ -403,6 +403,12 @@ main .header > .content .image {
   overflow: hidden;
   box-shadow: 3px 3px 3px darkslategray;
 }
+@media screen and (max-width: 899px) {
+  main .header > .content .image {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
 main .header > .content .image::after {
   content: " ";
   position: absolute;
@@ -416,6 +422,7 @@ main .header > .content .image::after {
   z-index: 10;
 }
 main .header > .content .image h2 {
+  padding: 0 30px;
   text-align: center;
   width: 100%;
   position: absolute;
