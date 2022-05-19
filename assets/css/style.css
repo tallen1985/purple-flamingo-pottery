@@ -439,6 +439,9 @@ main .header > .content .info .infoBox {
 main .header > .content .info .infoBox p {
   margin-bottom: 0;
 }
+main .featuredProducts {
+  margin-top: 2em;
+}
 main .featuredProducts > .content {
   max-width: 1400px;
   margin: 0 auto;

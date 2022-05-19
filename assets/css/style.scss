@@ -112,6 +112,7 @@ main {
   }
 
   .featuredProducts {
+    margin-top: 2em;
     > .content {
       @include max-wrap;
       @include setFont;
